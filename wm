@@ -1,0 +1,93 @@
+local a = Instance.new("ScreenGui", game.CoreGui)
+local b = Instance.new("Frame")
+local c = Instance.new("Frame")
+local d = Instance.new("TextLabel")
+local e = Instance.new("TextLabel")
+local f = Instance.new("TextLabel")
+a.Name = "b2f5ff47436671b6e533d8dc3614845d"
+a.ZIndexBehavior = Enum.ZIndexBehavior.Sibling
+b.Parent = a
+b.Name = "2ac43aa43bf473f9a9c09b4b608619d3"
+b.BackgroundColor3 = Color3.fromRGB(0, 255, 255)
+b.BorderColor3 = Color3.fromRGB(0, 255, 255)
+b.Position = UDim2.new(0.200000003, -95, 0.00999999978, -35)
+b.Size = UDim2.new(0, 200, 0, 3)
+b.Active = true
+b.Draggable = true
+c.Name = "fc777c0bc467e1ab98b4c6915af802ec"
+c.Parent = b
+c.BackgroundColor3 = Color3.fromRGB(0, 0, 0)
+c.BackgroundTransparency = 0.400
+c.BorderColor3 = Color3.fromRGB(0, 255, 255)
+c.Position = UDim2.new(-0.0011120605, 0, 0.955729187, 0)
+c.Size = UDim2.new(0, 200, 0, 25)
+d.Name = "821cd6737430dd24d5a02551e738c348"
+d.Parent = c
+d.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+d.BackgroundTransparency = 1.000
+d.BorderSizePixel = 0
+d.Position = UDim2.new(0.49999994, 0, -7.4505806e-09, 0)
+d.Size = UDim2.new(0, 50, 0, 25)
+d.Font = Enum.Font.SourceSans
+d.Text = "60 FPS"
+d.TextColor3 = Color3.fromRGB(0, 255, 255)
+d.TextSize = 14.000
+e.Name = "14754f13e5280c5d49d2ae536c2d57e2"
+e.Parent = c
+e.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+e.BackgroundTransparency = 1.000
+e.BorderSizePixel = 0
+e.Position = UDim2.new(0.75, 0, 0, 0)
+e.Size = UDim2.new(0, 50, 0, 25)
+e.Font = Enum.Font.SourceSans
+e.Text = "0:0"
+e.TextColor3 = Color3.fromRGB(0, 255, 255)
+e.TextSize = 14.000
+f.Name = "c89b66e6abc613785178c074a31a5677"
+f.Parent = c
+f.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+f.BackgroundTransparency = 1.000
+f.BorderSizePixel = 0
+f.Position = UDim2.new(0.06, 0, 0, 0)
+f.Size = UDim2.new(0, 100, 0, 25)
+f.Font = Enum.Font.SciFi
+f.Text = "synapse"
+f.TextColor3 = Color3.fromRGB(255, 255, 255)
+f.TextSize = 14.000
+f.TextXAlignment = Enum.TextXAlignment.Left
+local function g()
+    local h = Instance.new("Script", d)
+    h.Name = "a693ea2b7245e8daaa323e258ddc9e95"
+    spawn(
+        function()
+            while wait(1) do
+                pcall(
+                    function()
+                        h.Parent.Text =
+                            string.format("%s FPS", math.floor(game.Stats.Workspace.Heartbeat:GetValueString()))
+                    end
+                )
+            end
+        end
+    )
+    function hi(i)
+        return math.acos(math.cos(i * math.pi)) / math.pi
+    end
+end
+coroutine.wrap(g)()
+local function j()
+    local h = Instance.new("Script", e)
+    h.Name = "161969a14430f499d44c3a950e6fc137"
+    while wait() do
+        local k = os.date("*t")["min"]
+        local l = os.date("*t")["hour"]
+        if tonumber(k) <= 9 then
+            k = "0" .. k
+        end
+        if tonumber(l) <= 9 then
+            l = "0" .. l
+        end
+        h.Parent.Text = l .. ":" .. k
+    end
+end
+coroutine.wrap(j)()

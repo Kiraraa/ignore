@@ -1,5 +1,6 @@
 --[[ basic ui library made by Ayano @ v3rmillion.net
 https://v3rmillion.net/showthread.php?tid=1003939 
+toggle -> F5
 ]]
 
 local gui = {}
@@ -172,7 +173,7 @@ inputservice.InputBegan:Connect(function(input)
                 end
             end
         end
-        if input.KeyCode == Enum.KeyCode.Insert then
+        if input.KeyCode == Enum.KeyCode.F5 then
             enabled = not enabled
             if enabled then
                 actionservice:BindActionAtPriority("NoKeys", function()
